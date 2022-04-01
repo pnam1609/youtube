@@ -1,26 +1,24 @@
-import kind from '@enact/core/kind';
+import React, { useCallback, useState } from 'react'
 import ThemeDecorator from '@enact/sandstone/ThemeDecorator';
-import Panels from '@enact/sandstone/Panels';
+import Setting from '../Views/Setting'
+import { Route, Routable, Link } from '@enact/ui/Routable'
+import Home from '../Views/Home/Home.jsx'
+// import View from '../Views'
 
-import MainPanel from '../views/MainPanel';
+const Views = Routable({ navigate: 'onNavigate' }, ({ children }) => <div>{children}</div>);
 
-import css from './App.module.less';
-
-const App = kind({
-	name: 'App',
-
-	styles: {
-		css,
-		className: 'app'
-	},
-
-	render: (props) => (
+function App(props) {
+	const [path, nav] = useState('main');
+	// if onNavigate is called with a new path, update the state
+	const handleNavigate = useCallback((ev) => nav(ev.path), [nav]);
+	return (
 		<div {...props}>
-			<Panels>
-				<MainPanel />
-			</Panels>
+			<Views path={path} onNavigate={handleNavigate}>
+				<Route path="main" component={Home}>
+					<Route path='setting' component={Setting} />
+				</Route>
+			</Views>
 		</div>
 	)
-});
-
+}
 export default ThemeDecorator(App);
