@@ -10,9 +10,7 @@ function SideBar() {
       <Row style={{ height: '100%', padding: 0, margin: 0 }}>
         <Column style={{ width: 300 }}>
           <Cell size="25%" style={{ borderRight: 'solid 1px #73706a', paddingRight: 10, height: "100vh" }}>
-            <h3>Sign in</h3>
-          </Cell>
-          <Cell size="25%" style={{ borderRight: 'solid 1px #73706a', paddingRight: 10, height: "100vh" }}>
+          <h3>Sign in</h3>
             <Item style={{ fontSize: 22, height: 60, padding: 0 }}><Icon size="tiny">search</Icon>Search</Item>
             <Item style={{ fontSize: 22, height: 60, padding: 0 }}><Icon size="tiny">home</Icon>Home</Item>
             <Item style={{ fontSize: 22, height: 60, padding: 0 }}><Icon size="tiny">music</Icon>Music</Item>

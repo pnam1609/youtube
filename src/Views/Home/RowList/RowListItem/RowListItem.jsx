@@ -10,7 +10,7 @@ const RowListItem = (props) => {
 
     <ImageItem
       selectionComponent={SelectionComponent}
-      style={{ width: "500px", height: "500px" }}
+      style={{ width: "500px", height: "500px"}}
       src="https://i.ytimg.com/vi/hA_mbqIPNuA/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDYE8yiNLeZRjzjT2gjiWAToOPzhw"
       label="Music"
     >
