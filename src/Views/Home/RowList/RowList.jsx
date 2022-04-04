@@ -24,7 +24,6 @@ const RowList = (props) => {
                     })}
                 </div>
             </Scroller>
-
     </div>
 }
 export default RowList
