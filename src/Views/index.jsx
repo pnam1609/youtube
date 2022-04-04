@@ -12,7 +12,7 @@ function Views() {
             <Cell size="80%">
                 <Column>
                 <Scroller verticalScrollbar="hidden">
-                <div style={{ height: "100vh" }}>
+                <div style={{ height: "100vh",width:"95%",float:"right" }}>
                     <RowList />
                     {/* <p>rowlist</p> */}
                 </div>

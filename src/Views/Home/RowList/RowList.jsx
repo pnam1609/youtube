@@ -6,7 +6,7 @@ const RowList = (props) => {
             <Scroller horizontalScrollbar="hidden">
                 <div style={{ display: "flex" }}>
                     {data.map((item, index) => {
-                        return <RowListItem key={index} />
+                        return <RowListItem key={index}/>
                     })}
                 </div>
             </Scroller>
