@@ -1,13 +1,12 @@
 import React from 'react'
 import { Row, Cell } from '@enact/ui/Layout'
 import { Link } from '@enact/ui/Routable'
+import SideBar from '../../Components/SideBar'
 
 function Home() {
     return (
         <div>
-            <div>sidebar</div>
-            <div>Top bar</div>
-            <div>Content rowlist</div>
+            <div><SideBar/></div>
         </div>
     )
 }
