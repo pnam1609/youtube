@@ -5,7 +5,7 @@ import RowList from './RowList/RowList'
 import Scroller from '@enact/sandstone/Scroller'
 
 function Home() {
-
+    
     return (
         <div style={{ maxHeight: "100vh" }}>
             <div>sidebar thay đổi</div>

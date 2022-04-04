@@ -37,6 +37,8 @@
 		"@enact/spotlight": "^4.0.0",
 		"@enact/ui": "^4.0.0",
 		"@enact/webos": "^4.1.4",
+		"@fortawesome/free-solid-svg-icons": "^6.1.1",
+		"@fortawesome/react-fontawesome": "^0.1.18",
 		"@reduxjs/toolkit": "^1.8.0",
 		"@webosose/ares-cli": "^2.3.1",
 		"ilib": "^14.6.0",
