@@ -1,0 +1,11 @@
+.styleNone {
+    text-decoration: none;
+    color: white;
+}
+
+.item {
+    font-size: 22;
+    height: 60;
+    padding: 0;
+    margin: 0;
+}

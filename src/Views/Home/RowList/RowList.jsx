@@ -3,6 +3,7 @@ import Scroller from '@enact/sandstone/Scroller';
 import axios from 'axios';
 import { useEffect, useState } from "react";
 import React from 'react'
+import Topbar from "../../../Components/TopBar";
 
 const RowList = React.memo((props) => {
     const [data, setData] = useState({})
@@ -33,6 +34,7 @@ const RowList = React.memo((props) => {
     }
     return <>
         <div {...props}>
+            <Topbar />
             {data && rederData()}
         </div>
     </>
