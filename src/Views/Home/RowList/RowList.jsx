@@ -12,7 +12,7 @@ const RowList = (props) => {
             keys.forEach(key => {
                 map.set(key, res.data[key])
             })
-            setData(Array.from(map.values()))
+            setData(Array.from(map))
         }
         ).catch(err => {
             console.log(err)
@@ -21,13 +21,21 @@ const RowList = (props) => {
     console.log(data);
     return <>
         <div {...props}>
-            {data && data?.map((items, index) => (<Scroller key={index} horizontalScrollbar="hidden">
-                <div style={{ display: "flex" }}>
-                    {items.map((item, index) => {
-                        return <RowListItem key={index} title={item.title} thumbnail={item.thumbnail} longDescription={item.longDescription} />
-                    })}
-                </div>
-            </Scroller>))}
+            {data && data?.map((element, index) => {
+                const [title, collections] = element;
+                return (
+                    <div>
+                        <h3 style={{paddingLeft:"25px",marginBottom:"5px"}}>{title}</h3>
+                        <Scroller key={index} horizontalScrollbar="hidden">
+                            <div style={{ display: "flex" }}>
+                                {collections.map((item, index) => {
+                                    return <RowListItem key={index} title={item.title} thumbnail={item.thumbnail} longDescription={item.longDescription} />
+                                })}
+                            </div>
+                        </Scroller>
+                    </div>
+                )
+            })}
         </div>
     </>
 
