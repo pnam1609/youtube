@@ -6,10 +6,10 @@ import { Row, Cell, Column } from '@enact/ui/Layout'
 import Scroller from '@enact/sandstone/Scroller'
 
 function Views() {
-    const [size, setSize] = useState({ width: 100, sizeCell: "8%" })
+    const [size, setSize] = useState({ width: 100, sizeCell: "4%" })
     return (
         <Row style={{ height: '100%' }}>
-            <Cell onFocus={() => setSize({ width: 250, sizeCell: "12%" })} onBlur={() => setSize({ width: 70, sizeCell: "2%" })} size={size.sizeCell}>
+            <Cell onFocus={() => setSize({ width: 250, sizeCell: "14%" })} onBlur={() => setSize({ width: 70, sizeCell: "4%" })} size={size.sizeCell}>
                 <SideBar sideBarWidth={size.width} />
             </Cell>
             <Cell >
