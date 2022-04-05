@@ -2,8 +2,6 @@ import React from 'react'
 import { Item } from '@enact/sandstone/Item'
 import { Row, Cell, Column } from '@enact/ui/Layout'
 import Icon from '@enact/sandstone/Icon';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGear } from '@fortawesome/free-solid-svg-icons';
 
 
 
