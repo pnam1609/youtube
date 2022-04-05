@@ -4,9 +4,14 @@ import axios from 'axios';
 import { useEffect, useState } from "react";
 import React from 'react'
 import Topbar from "../../../Components/TopBar";
+import { setVideoItem } from "../../VideoPlayer/VideoPlayerSlice";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const RowList = React.memo((props) => {
     const [data, setData] = useState({})
+    const navigate = useNavigate();
+    const dispatch = useDispatch()
     useEffect(() => {
         axios.get("https://tue0305.github.io/recipes.json").then(res => setData(res.data))
             .catch(err => {
@@ -23,7 +28,10 @@ const RowList = React.memo((props) => {
                     <Scroller horizontalScrollbar="hidden">
                         <div style={{ display: "flex" }}>
                             {data[title].map((item, index) => {
-                                return <RowListItem key={index} title={item.title} thumbnail={item.thumbnail} longDescription={item.longDescription} />
+                                return <RowListItem onClick={()=>{
+                                    dispatch(setVideoItem(item))
+                                    navigate("/videoplayer")
+                                }} key={index} title={item.title} thumbnail={item.thumbnail} longDescription={item.longDescription} />
                             })}
                         </div>
                     </Scroller>
