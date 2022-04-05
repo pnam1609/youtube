@@ -8,8 +8,9 @@ import Setting from './Setting'
 import { Route, Routes } from 'react-router-dom'
 import Search from './Search/Search'
 
+
 function View() {
-    const [size, setSize] = useState({ width: 100, sizeCell: "4%" })
+    const [size, setSize] = useState({ width: 70, sizeCell: "4%" })
     return (
         <Row style={{ height: '100%' }}>
             <Cell onFocus={() => setSize({ width: 270, sizeCell: "15%" })} onBlur={() => setSize({ width: 70, sizeCell: "4%" })} size={size.sizeCell}>

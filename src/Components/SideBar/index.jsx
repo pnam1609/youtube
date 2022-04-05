@@ -14,45 +14,45 @@ function SideBar(props) {
                 <Column style={{ width: "100%" }}>
                     <div size="25%" style={{ paddingRight: 10, height: "100vh", display: "flex", flexDirection: "column", justifyContent: "space-around" }}>
                         <div>
-                            <Link to='./sign-in' className={styles.styleNone}>
+                            <Link to='/view/sign-in' className={styles.styleNone}>
                                 <Item className={styles.item}>
                                     <Icon size="tiny">profile</Icon>Sign in
                                 </Item>
                             </Link>
-                            <Link to='./search' className={styles.styleNone}>
+                            <Link to='/view/search' className={styles.styleNone}>
                                 <Item className={styles.item}>
                                     <Icon size="tiny">search</Icon>Search
                                 </Item>
                             </Link>
-                            <Link to='' className={styles.styleNone}>
+                            <Link to='/view' className={styles.styleNone}>
                                 <Item className={styles.item}>
                                     <Icon size="tiny">home</Icon>Home
                                 </Item>
                             </Link>
-                            <Link to='./music' className={styles.styleNone}>
+                            <Link to='/view/music' className={styles.styleNone}>
                                 <Item className={styles.item}>
                                     <Icon size="tiny">music</Icon>Music
                                 </Item>
                             </Link>
 
-                            <Link to='./gaming' className={styles.styleNone}>
+                            <Link to='/view/gaming' className={styles.styleNone}>
                                 <Item className={styles.item}>
                                     <Icon size="tiny">controller</Icon>Gaming
                                 </Item>
                             </Link>
-                            <Link to='./news' className={styles.styleNone}>
+                            <Link to='/view/news' className={styles.styleNone}>
                                 <Item className={styles.item}>
                                     <Icon size="tiny">bookmark</Icon>News
                                 </Item>
                             </Link>
-                            <Link to='./subscription' className={styles.styleNone}>
+                            <Link to='/view/subscription' className={styles.styleNone}>
                                 <Item className={styles.item}>
                                     <Icon size="tiny">playspeed</Icon>Subscriptions
                                 </Item>
                             </Link>
                         </div>
                         <div>
-                            <Link to='./setting' className={styles.styleNone}>
+                            <Link to='/view/setting' className={styles.styleNone}>
                                 <Item className={styles.item}><Icon size="tiny">gear</Icon>Setting</Item>
                             </Link>
                         </div>
