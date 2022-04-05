@@ -6,7 +6,7 @@ function SearchItem(props) {
   return (
     <div>
         <ImageItem
-            style={{ width: "500px", height: "500px" }}
+            style={{ width: "250px", height: "250px" }}
             src={props.thumbnail}
             label={props.longDescription}
         >
