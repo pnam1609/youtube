@@ -16,15 +16,14 @@ function View() {
             </Cell>
             <Cell >
                 <Column>
-                    
+
                     <Scroller verticalScrollbar="hidden">
-                        <div style={{ height: 900, width: "95%", float: "right", padding: "30px 0px 50px 0px" }}>
+                        <div style={{ height: 900 }}>
                             {/* <Route path='' component={RowList} /> */}
                             <Routes>
                                 <Route path='/' element={<RowList />} />
                                 <Route path='/setting/*' element={<Setting />} />
                             </Routes>
-                            
                         </div>
                     </Scroller>
                 </Column>

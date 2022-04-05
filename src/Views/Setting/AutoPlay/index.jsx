@@ -2,7 +2,7 @@ import React from 'react'
 
 function AutoPlay() {
   return (
-    <div>AutoPlay</div>
+    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: "100%F" }}>AutoPlay</div>
   )
 }
 
