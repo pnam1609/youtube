@@ -21,8 +21,8 @@ function Search() {
             type='text'
         />
         <div>
-            {data.map((item,index)=>{
-                return <SearchItem />
+            {data[0].map((item,index)=>{
+                return <SearchItem key={index} thumbnail={item.thumbnail} title={item.title} longDescription={item.longDescription} />
             })}
         </div>
     </div>
