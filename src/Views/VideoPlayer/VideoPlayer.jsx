@@ -1,14 +1,19 @@
 import VideoPlayer from '@enact/sandstone/VideoPlayer';
 import { MediaControls } from '@enact/sandstone/MediaPlayer';
 import Button from '@enact/sandstone/Button';
+import { useSelector } from 'react-redux';
+import { useRef } from 'react';
 
 function VideoDetail(props) {
+    const videoRef = useRef(null);
+
+    const videoItem = useSelector((state) => state.videoplayer.videoItem);
     return (
         <div {...props}>
-            <VideoPlayer title="HI~~~" >
-                <source src='https://tue0305.github.io/videos/hotpot/01.mp4' type="video/mp4" />
+            <VideoPlayer title={videoItem?.title} ref={videoRef} onJump={() => console.log("hello back")}>
+                <source src={videoItem?.url} type="video/mp4" />
                 <infoComponents>
-                    "Hello"
+                    {videoItem?.longDescription}
                 </infoComponents>
                 <MediaControls actionGuideLabel="Press Down Button">
                     <leftComponents><Button backgroundOpacity="translucent" icon="star" /></leftComponents>

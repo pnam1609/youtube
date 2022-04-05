@@ -1,8 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit';
-import path from '../Views/path.slice'
+import VideoPlayerSlice from '../Views/VideoPlayer/VideoPlayerSlice';
 
 export const store = configureStore({
     reducer: {
-        path
+        videoplayer: VideoPlayerSlice
     },
 });

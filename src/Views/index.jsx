@@ -6,6 +6,7 @@ import { Row, Cell, Column } from '@enact/ui/Layout'
 import Scroller from '@enact/sandstone/Scroller'
 import Setting from './Setting'
 import { Route, Routes } from 'react-router-dom'
+import VideoDetail from './VideoPlayer/VideoPlayer'
 
 function View() {
     const [size, setSize] = useState({ width: 100, sizeCell: "8%" })

@@ -7,6 +7,7 @@ const RowListItem = (props) => {
       style={{ width: "500px", height: "500px" }}
       src={props.thumbnail}
       label={props.title}
+      onClick={props.onClick}
     >
       {props.longDescription}
     </ImageItem>
