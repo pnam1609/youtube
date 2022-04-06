@@ -15,7 +15,6 @@
 		"test": "enact test",
 		"test-watch": "enact test --watch",
 		"start": "sh ./start.sh"
-		
 	},
 	"license": "UNLICENSED",
 	"private": true,
@@ -49,7 +48,6 @@
 		"react": "^17.0.1",
 		"react-dom": "^17.0.1",
 		"react-redux": "^7.2.7",
-		"react-router-dom": "^6.2.2",
-		"sh": "^0.0.3"
+		"react-router-dom": "^6.2.2"
 	}
 }
