@@ -10,7 +10,7 @@ import styles from './index.module.css'
 function SideBar(props) {
     return (
         <>
-            <Row style={{ height: '100%', padding: 0, margin: 0, borderRight: 'solid 1px #73706a', width: props.sideBarWidth }}>
+            <Row style={{ height: '100%', padding: 0, margin: 0,  width: props.sideBarWidth }}>
                 <Column style={{ width: "100%" }}>
                     <div size="25%" style={{ paddingRight: 10, height: "100vh", display: "flex", flexDirection: "column", justifyContent: "space-around" }}>
                         <div>

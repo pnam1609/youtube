@@ -1,45 +1,109 @@
 import React from 'react'
-import ItemBase from '@enact/sandstone/Item'
-import { Row, Cell, Column } from '@enact/ui/Layout'
+import Item from '@enact/sandstone/Item'
+import { Row, Cell } from '@enact/ui/Layout'
 import Scroller from '@enact/sandstone/Scroller'
-import { Route } from '@enact/ui/Routable'
+import { Link, Route, Routes } from 'react-router-dom'
 import AutoPlay from './AutoPlay'
 import Preview from './Preview'
+import styles from './index.module.css'
+import Language from './Language'
+import Restrict from './Restrict'
+import ResetApp from './ResetApp'
+
 function Setting() {
     return (
 
-        <Row style={{ height: '100%', padding: 0, margin: 0 }}>
-            <Scroller style={{ width: 300 }}>
-                <Cell size="25%" style={{ borderRight: 'solid 1px #73706a', paddingRight: 10, height: "100vh" }}>
+        <Row style={{ height: '100%', padding: 0, marginLeft: 0 }}>
+            <Cell size="18%">
+                <Scroller style={{ width: 340, borderRight: 'solid 1px #73706a' }} >
                     <h4>Setting</h4>
-                    <ItemBase style={{ fontSize: 16, height: 60, color: 'red' }}>Auto Play</ItemBase>
-                    <ItemBase style={{ fontSize: 16, height: 60 }}>Preview with sound</ItemBase>
-                    <ItemBase style={{ fontSize: 16, height: 60 }}> Restriced mode</ItemBase>
-                    <p style={{ fontSize: 16, borderBottom: 'solid 1px #73706a', color: "#73706a" }}> Link TV & Phone</p>
-                    <ItemBase style={{ fontSize: 16, height: 60 }}>Link with wifi</ItemBase>
-                    <ItemBase style={{ fontSize: 16, height: 60 }}>Link with TV code</ItemBase>
-                    <ItemBase style={{ fontSize: 16, height: 60 }}>Linked Devices</ItemBase>
-                    <p style={{ fontSize: 16, borderBottom: 'solid 1px #73706a', color: "#73706a" }}> LANGUAGES & LOCATION</p>
-                    <ItemBase style={{ fontSize: 16, height: 60 }}>Languages</ItemBase>
-                    <ItemBase style={{ fontSize: 16, height: 60 }}>Location</ItemBase>
-                    <p style={{ fontSize: 16, borderBottom: 'solid 1px #73706a', color: "#73706a" }}> HISTORY & DATA</p>
-                    <ItemBase style={{ fontSize: 16, height: 60 }}>History</ItemBase>
-                    <ItemBase style={{ fontSize: 16, height: 60 }}>Data</ItemBase>
-                </Cell>
-            </Scroller>
+                    <Link to="auto-play" className={styles.styleNone}>
+                        <Item style={{ fontSize: 20, height: 60 }}>
+                            Auto Play
+                        </Item>
+                    </Link>
+
+                    <Link to="preview" className={styles.styleNone}>
+                        <Item style={{ fontSize: 20, height: 60 }}>
+                            Preview with sound
+                        </Item>
+                    </Link>
+
+                    <Link to="restrict" className={styles.styleNone}>
+                        <Item style={{ fontSize: 20, height: 60 }}>
+                            Restriced mode
+                        </Item>
+                    </Link>
+
+                    <p style={{ fontSize: 22, borderBottom: 'solid 1px #73706a', color: "#73706a" }}> Link TV & Phone</p>
+                    <Link to="wifi" className={styles.styleNone}>
+                        <Item style={{ fontSize: 20, height: 60 }}>
+                            Link with wifi
+                        </Item>
+                    </Link>
+
+                    <Link to="code" className={styles.styleNone}>
+                        <Item style={{ fontSize: 20, height: 60 }}>
+                            Link with TV code
+                        </Item>
+                    </Link>
+
+                    <Link to="device" className={styles.styleNone}>
+                        <Item style={{ fontSize: 20, height: 60 }}>
+                            Linked Devices
+                        </Item>
+                    </Link>
+
+                    <p style={{ fontSize: 22, borderBottom: 'solid 1px #73706a', color: "#73706a" }}> LANGUAGES & LOCATION</p>
+                    <Link to="language" className={styles.styleNone}>
+                        <Item style={{ fontSize: 20, height: 60 }}>
+                            Languages
+                        </Item>
+                    </Link>
+
+                    <Link to="location" className={styles.styleNone}>
+                        <Item style={{ fontSize: 20, height: 60 }}>
+                            Location
+                        </Item>
+                    </Link>
+
+                    <p style={{ fontSize: 22, borderBottom: 'solid 1px #73706a', color: "#73706a" }}> HISTORY & DATA</p>
+
+                    <Link to="clear-watch" className={styles.styleNone}>
+                        <Item style={{ fontSize: 20, height: 60 }}>
+                            Clear watch history
+                        </Item>
+                    </Link>
+
+                    <Link to="clear-search" className={styles.styleNone}>
+                        <Item style={{ fontSize: 20, height: 60 }}>
+                            Clear search history
+                        </Item>
+                    </Link>
+
+                    <Link to="resetapp" className={styles.styleNone}>
+                        <Item style={{ fontSize: 20, height: 60 }}>
+                            Reset app
+                        </Item>
+                    </Link>
+
+                    <Link to="improve-youtube" className={styles.styleNone}>
+                        <Item style={{ fontSize: 20, height: 60 }}>
+                            Improve Youtbe
+                        </Item>
+                    </Link>
+                </Scroller>
+            </Cell>
 
             <Cell>
-                <ItemBase style={{ fontSize: 16, height: 60 }}>test</ItemBase>
-                {/* <Column>
-                    <Cell size={90} component="header">
-                        <h1>HEADER</h1>
-                    </Cell>
-                    <Cell>
-                        <p>Body area</p>
-                    </Cell>
-                </Column> */}
-                {/* <Route path='/auto-play' component={AutoPlay} />
-                <Route path='/preview' component={Preview} /> */}
+                <Routes>
+                    <Route render={() => <Navigate to="/auto-play" />} />
+                    <Route path='/auto-play' element={<AutoPlay />} />
+                    <Route path='/preview' element={<Preview />} />
+                    <Route path='/language' element={<Language />} />
+                    <Route path='/restrict' element={<Restrict />} />
+                    <Route path='/resetapp' element={<ResetApp />} />
+                </Routes>
             </Cell>
         </Row>
     )

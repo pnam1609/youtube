@@ -41,7 +41,7 @@ const RowList = React.memo((props) => {
         return dataRender
     }
     return <>
-        <div {...props}>
+        <div {...props} style={{ width: "95%", float: "right" }}>
             <Topbar />
             {data && rederData()}
         </div>
