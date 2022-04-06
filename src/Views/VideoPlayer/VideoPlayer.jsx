@@ -3,6 +3,7 @@ import { MediaControls } from '@enact/sandstone/MediaPlayer';
 import Button from '@enact/sandstone/Button';
 import { useSelector } from 'react-redux';
 import { useRef } from 'react';
+import VideoItemList from './VideoItemList';
 
 function VideoDetail(props) {
     const videoRef = useRef(null);
@@ -16,11 +17,13 @@ function VideoDetail(props) {
                     {videoItem?.longDescription}
                 </infoComponents>
                 <MediaControls actionGuideLabel="Press Down Button">
-                    <leftComponents><Button backgroundOpacity="translucent" icon="star" /></leftComponents>
-                    <rightComponents><Button backgroundOpacity="translucent" icon="notification" /></rightComponents>
+                    <div style={{display:"flex", justifyContent:"space-around"}}>
+                    <VideoItemList thumbnail={videoItem?.thumbnail} title={videoItem?.title}/>
+                  <VideoItemList thumbnail={videoItem?.thumbnail} title={videoItem?.title}/>
+                  <VideoItemList thumbnail={videoItem?.thumbnail} title={videoItem?.title}/>
+                    </div>
+                
 
-                    <Button backgroundOpacity="translucent">Add To Favorites</Button>
-                    <Button backgroundOpacity="translucent" icon="search" />
                 </MediaControls>
             </VideoPlayer>
         </div>

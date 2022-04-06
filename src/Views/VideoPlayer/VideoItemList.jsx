@@ -1,17 +1,17 @@
 import ImageItem from '@enact/sandstone/ImageItem';
 
-const RowListItem = (props) => {
+const VideoItemList = (props) => {
 
   return <div {...props}>
     <ImageItem
-      style={{ width: "500px", height: "500px" }}
+      style={{ width: "200px", height: "200px" }}
       src={props.thumbnail}
       label={props.title}
       // onClick={props.onClick}
     >
-      {props.longDescription}
+      {/* {props.longDescription} */}
     </ImageItem>
 
   </div>
 }
-export default RowListItem
+export default VideoItemList
