@@ -2,7 +2,7 @@ import React from 'react'
 import Item from '@enact/sandstone/Item'
 import { Row, Cell } from '@enact/ui/Layout'
 import Scroller from '@enact/sandstone/Scroller'
-import { Link, Route, Routes, useNavigate } from 'react-router-dom'
+import { Route, Routes, useNavigate } from 'react-router-dom'
 import AutoPlay from './AutoPlay'
 import Language from './Language'
 import Restrict from './Restrict'
@@ -22,57 +22,57 @@ function Setting() {
             <Cell size="18%">
                 <Scroller style={{ width: 340, borderRight: 'solid 1px #73706a' }} >
                     <h4>Setting</h4>
-                    <Item style={{ fontSize: 20, height: 60 }} onClick={() => navigate("/view/setting/premium")}>
+                    <Item style={{ fontSize: 20, height: 60 }} onClick={() => navigate("/setting/premium")}>
                         Get Youtube Premium
                     </Item>
 
-                    <Item style={{ fontSize: 20, height: 60 }} onClick={() => navigate("/view/setting/auto-play")}>
+                    <Item style={{ fontSize: 20, height: 60 }} onClick={() => navigate("/setting/auto-play")}>
                         Auto Play
                     </Item>
 
 
 
-                    <Item style={{ fontSize: 20, height: 60 }} onClick={() => navigate("/view/setting/restrict")}>
+                    <Item style={{ fontSize: 20, height: 60 }} onClick={() => navigate("/setting/restrict")}>
                         Restriced mode
                     </Item>
 
                     <p style={{ fontSize: 22, borderBottom: 'solid 1px #73706a', color: "#73706a" }}> Link TV & Phone</p>
-                    <Item style={{ fontSize: 20, height: 60 }} onClick={() => navigate("/view/setting/wifi")}>
+                    <Item style={{ fontSize: 20, height: 60 }} onClick={() => navigate("/setting/wifi")}>
                         Link with wifi
                     </Item>
 
-                    <Item style={{ fontSize: 20, height: 60 }} onClick={() => navigate("/view/setting/code")}>
+                    <Item style={{ fontSize: 20, height: 60 }} onClick={() => navigate("/setting/code")}>
                         Link with TV code
                     </Item>
 
-                    <Item style={{ fontSize: 20, height: 60 }} onClick={() => navigate("/view/setting/linked-device")}>
+                    <Item style={{ fontSize: 20, height: 60 }} onClick={() => navigate("/setting/linked-device")}>
                         Linked Devices
                     </Item>
 
                     <p style={{ fontSize: 22, borderBottom: 'solid 1px #73706a', color: "#73706a" }}> LANGUAGES & LOCATION</p>
-                    <Item style={{ fontSize: 20, height: 60 }} onClick={() => navigate("/view/setting/language")}>
+                    <Item style={{ fontSize: 20, height: 60 }} onClick={() => navigate("/setting/language")}>
                         Languages
                     </Item>
 
-                    <Item style={{ fontSize: 20, height: 60 }} onClick={() => navigate("/view/setting/location")}>
+                    <Item style={{ fontSize: 20, height: 60 }} onClick={() => navigate("/setting/location")}>
                         Location
                     </Item>
 
                     <p style={{ fontSize: 22, borderBottom: 'solid 1px #73706a', color: "#73706a" }}> HISTORY & DATA</p>
 
-                    <Item style={{ fontSize: 20, height: 60 }} onClick={() => navigate("/view/setting/clear-watch")}>
+                    <Item style={{ fontSize: 20, height: 60 }} onClick={() => navigate("/setting/clear-watch")}>
                         Clear watch history
                     </Item>
 
-                    <Item style={{ fontSize: 20, height: 60 }} onClick={() => navigate("/view/setting/clear-search")}>
+                    <Item style={{ fontSize: 20, height: 60 }} onClick={() => navigate("/setting/clear-search")}>
                         Clear search history
                     </Item>
 
-                    <Item style={{ fontSize: 20, height: 60 }} onClick={() => navigate("/view/setting/resetapp")}>
+                    <Item style={{ fontSize: 20, height: 60 }} onClick={() => navigate("/setting/resetapp")}>
                         Reset app
                     </Item>
 
-                    <Item style={{ fontSize: 20, height: 60 }} onClick={() => navigate("/view/setting/improve")}>
+                    <Item style={{ fontSize: 20, height: 60 }} onClick={() => navigate("/setting/improve")}>
                         Improve Youtbe
                     </Item>
                 </Scroller>
@@ -80,7 +80,6 @@ function Setting() {
 
             <Cell>
                 <Routes>
-                    <Route render={() => <Navigate to="/auto-play" />} />
                     <Route path='/auto-play' element={<AutoPlay />} />
                     <Route path='/premium' element={<Premium />} />
                     <Route path='/language' element={<Language />} />

@@ -22,21 +22,23 @@ const RowList = React.memo((props) => {
     const rederData = () => {
         const dataRender = []
         for (let title in data) {
+            let i = 0
             dataRender.push(
-                <div>
+                <div key={i}>
                     <h3 style={{ paddingLeft: "25px", marginBottom: "5px" }}>{title}</h3>
                     <Scroller horizontalScrollbar="hidden">
                         <div style={{ display: "flex" }}>
                             {data[title].map((item, index) => {
-                                return <RowListItem onClick={()=>{
+                                return <RowListItem onClick={() => {
                                     dispatch(setVideoItem(item))
                                     navigate("/videoplayer")
-                                }} key={index} title={item.title} thumbnail={item.thumbnail} longDescription={item.longDescription} />
+                                }} key={index} title={item.title} thumbnail={item.thumbnail} longdescription={item.longDescription} />
                             })}
                         </div>
                     </Scroller>
                 </div>
             )
+            i++
         }
         return dataRender
     }

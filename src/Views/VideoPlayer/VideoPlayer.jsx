@@ -1,6 +1,5 @@
 import VideoPlayer from '@enact/sandstone/VideoPlayer';
 import { MediaControls } from '@enact/sandstone/MediaPlayer';
-import Button from '@enact/sandstone/Button';
 import { useSelector } from 'react-redux';
 import { useRef } from 'react';
 import VideoItemList from './VideoItemList';
@@ -22,8 +21,6 @@ function VideoDetail(props) {
                   <VideoItemList thumbnail={videoItem?.thumbnail} title={videoItem?.title}/>
                   <VideoItemList thumbnail={videoItem?.thumbnail} title={videoItem?.title}/>
                     </div>
-                
-
                 </MediaControls>
             </VideoPlayer>
         </div>

@@ -1,8 +1,8 @@
 import React from 'react'
 import { Item } from '@enact/sandstone/Item'
-import { Row, Cell, Column } from '@enact/ui/Layout'
+import { Row, Column } from '@enact/ui/Layout'
 import Icon from '@enact/sandstone/Icon';
-import { Link, Navigate, useNavigate } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom';
 import styles from './index.module.css'
 
 
@@ -15,30 +15,30 @@ function SideBar(props) {
                 <Column style={{ width: "100%" }}>
                     <div size="25%" style={{ paddingRight: 10, height: "100vh", display: "flex", flexDirection: "column", justifyContent: "space-around" }}>
                         <div>
-                            <Item className={styles.item} onClick={() => navigate("/view/sign-in")}>
+                            <Item className={styles.item} onClick={() => navigate("/sign-in")}>
                                 <Icon size="tiny">profile</Icon>Sign in
                             </Item>
-                            <Item className={styles.item} onClick={() => navigate("/view/search")} >
+                            <Item className={styles.item} onClick={() => navigate("/search")} >
                                 <Icon size="tiny">search</Icon>Search
                             </Item>
-                            <Item className={styles.item} onClick={() => navigate("/view")}>
+                            <Item className={styles.item} onClick={() => navigate("")}>
                                 <Icon size="tiny">home</Icon>Home
                             </Item>
-                            <Item className={styles.item} onClick={() => navigate("/view/music")}>
+                            <Item className={styles.item} onClick={() => navigate("/music")}>
                                 <Icon size="tiny">music</Icon>Music
                             </Item>
-                            <Item className={styles.item} onClick={() => navigate("/view/gaming")} >
+                            <Item className={styles.item} onClick={() => navigate("/gaming")} >
                                 <Icon size="tiny">controller</Icon>Gaming
                             </Item>
-                            <Item className={styles.item} onClick={() => navigate("/view/news")} >
+                            <Item className={styles.item} onClick={() => navigate("/news")} >
                                 <Icon size="tiny">bookmark</Icon>News
                             </Item>
-                            <Item className={styles.item} onClick={() => navigate("/view/subscription")} >
+                            <Item className={styles.item} onClick={() => navigate("/subscription")} >
                                 <Icon size="tiny">playspeed</Icon>Subscriptions
                             </Item>
                         </div>
                         <div>
-                            <Item className={styles.item} onClick={() => navigate("/view/setting")}><Icon size="tiny">gear</Icon>Setting</Item >
+                            <Item className={styles.item} onClick={() => navigate("/setting")}><Icon size="tiny">gear</Icon>Setting</Item >
                         </div>
                     </div>
                 </Column>

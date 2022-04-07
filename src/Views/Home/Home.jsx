@@ -1,7 +1,4 @@
 import React from 'react'
-import { Row, Cell } from '@enact/ui/Layout'
-import { Link } from '@enact/ui/Routable'
-import RowList from './RowList/RowList'
 import Scroller from '@enact/sandstone/Scroller'
 
 function Home() {

@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
+import  { useState } from 'react'
 import SideBar from '../Components/SideBar'
-import Topbar from '../Components/TopBar'
 import RowList from './Home/RowList/RowList'
 import { Row, Cell, Column } from '@enact/ui/Layout'
 import Scroller from '@enact/sandstone/Scroller'
@@ -18,7 +17,6 @@ function View() {
             </Cell>
             <Cell >
                 <Column>
-
                     <Scroller verticalScrollbar="hidden">
                         <div style={{ height: 900 }}>
                             {/* <Route path='' component={RowList} /> */}
@@ -26,7 +24,6 @@ function View() {
                                 <Route path='/' element={<RowList />} />
                                 <Route path='/setting/*' element={<Setting />} />
                                 <Route path='/search/*' element={<Search />} />
-
                             </Routes>
                         </div>
                     </Scroller> 

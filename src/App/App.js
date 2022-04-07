@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react'
+import React from 'react'
 import ThemeDecorator from '@enact/sandstone/ThemeDecorator';
 import View from '../Views'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
@@ -9,12 +9,10 @@ function App(props) {
 		<div {...props}>
 			<BrowserRouter>
 				<Routes>
-				<Route path='/videoplayer' element={<VideoDetail />} />
-				<Route
-        path="*"
-        element={<Navigate to="/view" replace />}
-    />
-					<Route path='/view/*' element={<View />} />
+					<Route path='*' element={() => Navigate("/")} />
+
+					<Route path='/videoplayer' element={<VideoDetail />} />
+					<Route path='/' element={<View />} />
 
 				</Routes>
 			</BrowserRouter>
