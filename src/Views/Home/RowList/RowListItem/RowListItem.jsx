@@ -10,7 +10,7 @@ const RowListItem = (props) => {
     // e.stopPropagation();
     // Spotlight.focus('[data-component-id="myButton"]');
     console.log(e)
-  }
+  } 
 
   return <div {...props}>
     <ImageItem
