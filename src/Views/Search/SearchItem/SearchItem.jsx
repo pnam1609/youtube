@@ -2,6 +2,7 @@ import ImageItem from '@enact/sandstone/ImageItem'
 import React from 'react'
 
 
+
 function SearchItem(props) {
   return (
     <div>
